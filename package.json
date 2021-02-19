@@ -7,7 +7,7 @@
     "predeploy": "npm version patch -m 'Deploy version %s'",
     "deploy": "gh-pages -d dist",
     "preversion": "yarn test",
-    "version": "yarn run build && git add -Af dist",
+    "version": "yarn run build",
     "postversion": "git push && git push --tags",
     "build": "parcel build index.html --public-url /giving/",
     "dev": "parcel index.html --open",
