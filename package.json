@@ -11,5 +11,8 @@
   },
   "devDependencies": {
     "parcel": "^2.0.0-beta.1"
+  },
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.5.0"
   }
 }

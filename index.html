@@ -22,9 +22,15 @@
     <!-- <meta property="twitter:image" content="/img/opengraph.png"> -->
 
     <script src="https://unpkg.com/xstate@4/dist/xstate.js"></script>
+
+    <!-- webcomponents -->
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="module" src="js/beneficiary-preview.js"></script>
+
     <link rel="stylesheet" href="/css/framework.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
   </head>
+
   <body>
     <nav>
       <a href="/" class="brand">
@@ -45,25 +51,32 @@
         <label class="button warning" for="modal-signup">Start Giving</label>
       </div>
     </nav>
+
     <main>
       <section>
         <h1 class="title">Top Picks</h1>
         <div class="flex full three-1000">
-          <div>
-            <div class="avatar" style="background-image: url('/img/IMG_8332-372x217.jpg');"></div>
-            <div class="raise-amount">
-              <div class="raised">$213</div>
-              raised of $600 goal
-            </div>
-            <div class="progress-bar">
-              <div class="bar" style="width: 35.5%;"></div>
-            </div>
-            <p class="description">
-              Stephanie worked at Chili’s for 2 years. Now she is out of a job due to COVID. She
-              cannot afford her expenses and needs your help.
-            </p>
-            <div class="button warning">Donate Now</div>
-          </div>
+          <!-- XXX this is using a web component -->
+          <beneficiary-preview
+            raised="220"
+            goal="700"
+            description="Stephanie worked at Chili’s for 2 years. Now she is out of a job due to COVID. She cannot afford her expenses and needs your help."
+          ></beneficiary-preview>
+          <!-- <div> -->
+          <!--   <div class="avatar" style="background-image: url('/img/IMG_8332-372x217.jpg');"></div> -->
+          <!--   <div class="raise-amount"> -->
+          <!--     <div class="raised">$213</div> -->
+          <!--     raised of $600 goal -->
+          <!--   </div> -->
+          <!--   <div class="progress-bar"> -->
+          <!--     <div class="bar" style="width: 35.5%;"></div> -->
+          <!--   </div> -->
+          <!--   <p class="description"> -->
+          <!--     Stephanie worked at Chili’s for 2 years. Now she is out of a job due to COVID. She -->
+          <!--     cannot afford her expenses and needs your help. -->
+          <!--   </p> -->
+          <!--   <div class="button warning">Donate Now</div> -->
+          <!-- </div> -->
           <div>
             <div
               class="avatar"
@@ -151,6 +164,7 @@
         </div>
       </section>
     </main>
+
     <div class="modal">
       <input id="modal-signup" type="checkbox" />
       <label for="modal-signup" class="overlay"></label>
@@ -178,11 +192,33 @@
         </footer>
       </article>
     </div>
+
     <div class="footer">
       © Copyright 2021 Team Giving.
       <a href="https://teamgiving.com/privacy-policy/">Privacy Policy</a> |
       <a href="https://teamgiving.com/terms-of-use/">Terms &amp; Conditions</a> |
       <a href="https://teamgiving.com/cookie-policy/">Cookie Policy</a>
     </div>
+
+    <template id="beneficiary-preview-template">
+      <style>
+        @import "/css/framework.min.css";
+        @import "/css/main.css";
+      </style>
+      <div>
+        <div class="avatar" style="background-image: url('/img/IMG_8332-372x217.jpg');"></div>
+        <div class="raise-amount">
+          <div class="raised">$213</div>
+          <div class="goal">$600</div>
+        </div>
+        <div class="progress-bar">
+          <div class="bar" style="width: 35.5%;"></div>
+        </div>
+        <p class="description">
+          Loading
+        </p>
+        <div class="button warning">Donate Now</div>
+      </div>
+    </template>
   </body>
 </html>
