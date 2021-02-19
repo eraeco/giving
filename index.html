@@ -1,158 +1,188 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="favicon.ico" rel="shortcut icon">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="favicon.ico" rel="shortcut icon" />
 
-  <title>Team Giving - #PeopleHelpingPeople</title>
-  <meta name="title" content="Team Giving - #PeopleHelpingPeople">
-  <meta name="description" content="Team Giving - #PeopleHelpingPeople">
+    <title>Team Giving - #PeopleHelpingPeople</title>
+    <meta name="title" content="Team Giving - #PeopleHelpingPeople" />
+    <meta name="description" content="Team Giving - #PeopleHelpingPeople" />
 
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://teamgiving.com//">
-  <meta property="og:title" content="Team Giving - #PeopleHelpingPeople">
-  <meta property="og:description" content="Team Giving - #PeopleHelpingPeople">
-  <!-- <meta property="og:image" content="/img/opengraph.png"> -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://teamgiving.com//" />
+    <meta property="og:title" content="Team Giving - #PeopleHelpingPeople" />
+    <meta property="og:description" content="Team Giving - #PeopleHelpingPeople" />
+    <!-- <meta property="og:image" content="/img/opengraph.png"> -->
 
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://teamgiving.com">
-  <meta property="twitter:title" content="Team Giving - #PeopleHelpingPeople">
-  <meta property="twitter:description" content="Team Giving - #PeopleHelpingPeople">
-  <!-- <meta property="twitter:image" content="/img/opengraph.png"> -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://teamgiving.com" />
+    <meta property="twitter:title" content="Team Giving - #PeopleHelpingPeople" />
+    <meta property="twitter:description" content="Team Giving - #PeopleHelpingPeople" />
+    <!-- <meta property="twitter:image" content="/img/opengraph.png"> -->
 
-  <script src="https://unpkg.com/xstate@4/dist/xstate.js"></script>
-  <link rel="stylesheet" href="/css/framework.min.css">
-  <link rel="stylesheet" href="/css/main.css">
-</head>
-<body>
-  <nav>
-    <a href="/" class="brand">
-      <img class="logo" src="/img/logo.png" />
-    </a>
-    <input id="bmenu" type="checkbox" class="show">
-    <label for="bmenu" class="burger toggle pseudo button">
-      <svg viewBox="0 0 100 50" width="20" height="20">
-        <rect width="100" height="10"></rect>
-        <rect y="30" width="100" height="10"></rect>
-        <rect y="60" width="100" height="10"></rect>
-      </svg>
-    </label>
-    <div class="menu">
-      <a href="/about-us" class="pseudo button">About Us</a>
-      <a href="/inspiration" class="pseudo button">Inspiration</a>
-      <a href="/faq" class="pseudo button">FAQ</a>
-      <label class="button warning" for="modal-signup">Start Giving</label>
-    </div>
-  </nav>
-  <main>
-    <section>
-      <h1 class="title">Top Picks</h1>
-      <div class="flex full three-1000">
-        <div>
-          <div class="avatar" style="background-image: url('/img/IMG_8332-372x217.jpg')"></div>
-          <div class="raise-amount">
-            <div class="raised">$213</div> raised of $600 goal
-          </div>
-          <div class="progress-bar">
-            <div class="bar" style="width: 35.5%"></div>
-          </div>
-          <p class="description">Stephanie worked at Chili’s for 2 years. Now she is out of a job due to COVID. She cannot afford her expenses and needs your help.</p>
-          <div class="button warning">Donate Now</div>
-        </div>
-        <div>
-          <div class="avatar" style="background-image: url('/img/IMG_8333-e1610044220849-372x217.jpeg')"></div>
-          <div class="raise-amount">
-            <div class="raised">$90</div> raised of $600 goal
-          </div>
-          <div class="progress-bar">
-            <div class="bar" style="width: 15%"></div>
-          </div>
-          <p class="description">Alina is a restaurant worker in Oregon and Out of Work due to COVID shutdowns. She cannot afford her daily expenses. Can you help?</p>
-          <div class="button warning">Donate Now</div>
-        </div>
-        <div>
-          <div class="avatar" style="background-image: url('/img/IMG_4742-372x217.jpg')"></div>
-          <div class="raise-amount">
-            <div class="raised">$105</div> raised of $600 goal
-          </div>
-          <div class="progress-bar">
-            <div class="bar" style="width: 17.5%"></div>
-          </div>
-          <p class="description">Shelly works at a restaurant in California and Out of Work due to COVID shutdowns. She cannot afford her expenses and needs a Hand Up. Can you help?</p>
-          <div class="button warning">Donate Now</div>
-        </div>
+    <script src="https://unpkg.com/xstate@4/dist/xstate.js"></script>
+    <link rel="stylesheet" href="/css/framework.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/" class="brand">
+        <img class="logo" src="/img/logo.png" />
+      </a>
+      <input id="bmenu" type="checkbox" class="show" />
+      <label for="bmenu" class="burger toggle pseudo button">
+        <svg viewBox="0 0 100 50" width="20" height="20">
+          <rect width="100" height="10"></rect>
+          <rect y="30" width="100" height="10"></rect>
+          <rect y="60" width="100" height="10"></rect>
+        </svg>
+      </label>
+      <div class="menu">
+        <a href="/about-us" class="pseudo button">About Us</a>
+        <a href="/inspiration" class="pseudo button">Inspiration</a>
+        <a href="/faq" class="pseudo button">FAQ</a>
+        <label class="button warning" for="modal-signup">Start Giving</label>
       </div>
-    </section>
-    <section>
-      <div class="flex two cta-alt">
-        <div class="full half-1000">
-          <div class="full half-1000 cta-text">
-            <h3>Do you need support?</h3>
-            <p>Apply to be featured on Team Giving.</p>
-            <label class="button outline" for="modal-signup">Apply Now</label>
+    </nav>
+    <main>
+      <section>
+        <h1 class="title">Top Picks</h1>
+        <div class="flex full three-1000">
+          <div>
+            <div class="avatar" style="background-image: url('/img/IMG_8332-372x217.jpg');"></div>
+            <div class="raise-amount">
+              <div class="raised">$213</div>
+              raised of $600 goal
+            </div>
+            <div class="progress-bar">
+              <div class="bar" style="width: 35.5%;"></div>
+            </div>
+            <p class="description">
+              Stephanie worked at Chili’s for 2 years. Now she is out of a job due to COVID. She
+              cannot afford her expenses and needs your help.
+            </p>
+            <div class="button warning">Donate Now</div>
+          </div>
+          <div>
+            <div
+              class="avatar"
+              style="background-image: url('/img/IMG_8333-e1610044220849-372x217.jpeg');"
+            ></div>
+            <div class="raise-amount">
+              <div class="raised">$90</div>
+              raised of $600 goal
+            </div>
+            <div class="progress-bar">
+              <div class="bar" style="width: 15%;"></div>
+            </div>
+            <p class="description">
+              Alina is a restaurant worker in Oregon and Out of Work due to COVID shutdowns. She
+              cannot afford her daily expenses. Can you help?
+            </p>
+            <div class="button warning">Donate Now</div>
+          </div>
+          <div>
+            <div class="avatar" style="background-image: url('/img/IMG_4742-372x217.jpg');"></div>
+            <div class="raise-amount">
+              <div class="raised">$105</div>
+              raised of $600 goal
+            </div>
+            <div class="progress-bar">
+              <div class="bar" style="width: 17.5%;"></div>
+            </div>
+            <p class="description">
+              Shelly works at a restaurant in California and Out of Work due to COVID shutdowns. She
+              cannot afford her expenses and needs a Hand Up. Can you help?
+            </p>
+            <div class="button warning">Donate Now</div>
           </div>
         </div>
-        <div class="full half-1000">
-          <img class="cta-image" src="img/need.jpg" />
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="flex two cta">
-        <div class="full half-1000">
-          <img class="cta-image" src="img/become2.jpg" />
-        </div>
-        <div class="full half-1000">
-          <div class="full half-1000 cta-text">
-            <h3>Become a Philanthropist</h3>
-            <p>Hear their stories and join with us to change lives.</p>
-            <label class="button outline" for="modal-signup">Start Now</label>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="cta-block">
-        <h3>Donate Direct to Team Giving</h3>
-        <p>Not sure which campaign you would like to contribute to? Donate direct to Team Giving and we will make sure your money is put to the most impactful use!</p>
-        <label class="button warning" for="modal-signup">Donate Now</label>
-      </div>
-    </section>
-    <section>
-      <div class="mission">
-        <p>Team Giving seeks to connect philanthropic-minded people like you with inspiring people who have stories and situations of great need like these people.</p>
-        <p>By donating, you understand Team Giving has complete control and discretion over your charitable contribution and may use your gift toward any of its qualified, approved charitable beneficiaries including each of these inspiring people.</p>
-      </div>
-    </section>
-  </main>
-  <div class="modal">
-    <input id="modal-signup" type="checkbox" />
-    <label for="modal-signup" class="overlay"></label>
-    <article>
-      <header>
-        <h3>Start Giving</h3>
-        <label for="modal-signup" class="close">&times;</label>
-      </header>
-      <section class="content">
-        <p>You can change someone's life. Sign up to become a philanthropist today!</p>
-        <fieldset class="flex two">
-          <label><input type="text" placeholder="First Name"></label>
-          <label><input type="text" placeholder="Last Name"></label>
-        </fieldset>
-        <fieldset class="flex four">
-          <label class="three-fourth"><input type="email" placeholder="Email"></label>
-          <label><input type="text" placeholder="Zipcode"></label>
-        </fieldset>
       </section>
-      <footer>
-        <a class="button warning" href="#">Signup</a>
-        <label for="modal-signup" class="pseudo button">
-          Maybe next time
-        </label>
-      </footer>
-    </article>
-  </div>
-  <div class="footer">© Copyright 2021 Team Giving. <a href="https://teamgiving.com/privacy-policy/">Privacy Policy</a> | <a href="https://teamgiving.com/terms-of-use/">Terms &amp; Conditions</a> | <a href="https://teamgiving.com/cookie-policy/">Cookie Policy</a></div>
-</body>
+      <section>
+        <div class="flex two cta-alt">
+          <div class="full half-1000">
+            <div class="full half-1000 cta-text">
+              <h3>Do you need support?</h3>
+              <p>Apply to be featured on Team Giving.</p>
+              <label class="button outline" for="modal-signup">Apply Now</label>
+            </div>
+          </div>
+          <div class="full half-1000">
+            <img class="cta-image" src="img/need.jpg" />
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="flex two cta">
+          <div class="full half-1000">
+            <img class="cta-image" src="img/become2.jpg" />
+          </div>
+          <div class="full half-1000">
+            <div class="full half-1000 cta-text">
+              <h3>Become a Philanthropist</h3>
+              <p>Hear their stories and join with us to change lives.</p>
+              <label class="button outline" for="modal-signup">Start Now</label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="cta-block">
+          <h3>Donate Direct to Team Giving</h3>
+          <p>
+            Not sure which campaign you would like to contribute to? Donate direct to Team Giving
+            and we will make sure your money is put to the most impactful use!
+          </p>
+          <label class="button warning" for="modal-signup">Donate Now</label>
+        </div>
+      </section>
+      <section>
+        <div class="mission">
+          <p>
+            Team Giving seeks to connect philanthropic-minded people like you with inspiring people
+            who have stories and situations of great need like these people.
+          </p>
+          <p>
+            By donating, you understand Team Giving has complete control and discretion over your
+            charitable contribution and may use your gift toward any of its qualified, approved
+            charitable beneficiaries including each of these inspiring people.
+          </p>
+        </div>
+      </section>
+    </main>
+    <div class="modal">
+      <input id="modal-signup" type="checkbox" />
+      <label for="modal-signup" class="overlay"></label>
+      <article>
+        <header>
+          <h3>Start Giving</h3>
+          <label for="modal-signup" class="close">&times;</label>
+        </header>
+        <section class="content">
+          <p>You can change someone's life. Sign up to become a philanthropist today!</p>
+          <fieldset class="flex two">
+            <label><input type="text" placeholder="First Name" /></label>
+            <label><input type="text" placeholder="Last Name" /></label>
+          </fieldset>
+          <fieldset class="flex four">
+            <label class="three-fourth"><input type="email" placeholder="Email" /></label>
+            <label><input type="text" placeholder="Zipcode" /></label>
+          </fieldset>
+        </section>
+        <footer>
+          <a class="button warning" href="#">Signup</a>
+          <label for="modal-signup" class="pseudo button">
+            Maybe next time
+          </label>
+        </footer>
+      </article>
+    </div>
+    <div class="footer">
+      © Copyright 2021 Team Giving.
+      <a href="https://teamgiving.com/privacy-policy/">Privacy Policy</a> |
+      <a href="https://teamgiving.com/terms-of-use/">Terms &amp; Conditions</a> |
+      <a href="https://teamgiving.com/cookie-policy/">Cookie Policy</a>
+    </div>
+  </body>
 </html>
