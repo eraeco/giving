@@ -4,10 +4,14 @@
   "repository": "https://github.com/eraeco/giving.git",
   "license": "MIT",
   "scripts": {
+    "deploy": "npm version patch -m 'Deploy version %s'",
+    "preversion": "yarn test",
+    "version": "yarn run build && git add -Af dist",
+    "postversion": "git push && git push --tags",
     "build": "parcel build index.html",
     "dev": "parcel index.html --open",
-    "start": "npm run build && npm run dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "yarn run build && yarn run dev",
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "devDependencies": {
     "parcel": "^2.0.0-beta.1"
