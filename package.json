@@ -4,7 +4,8 @@
   "repository": "https://github.com/eraeco/giving.git",
   "license": "MIT",
   "scripts": {
-    "deploy": "npm version patch -m 'Deploy version %s'",
+    "predeploy": "npm version patch -m 'Deploy version %s'",
+    "deploy": "gh-pages -d dist",
     "preversion": "yarn test",
     "version": "yarn run build && git add -Af dist",
     "postversion": "git push && git push --tags",
@@ -14,6 +15,7 @@
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "parcel": "^2.0.0-beta.1"
   },
   "dependencies": {
