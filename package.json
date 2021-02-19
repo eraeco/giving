@@ -9,7 +9,7 @@
     "preversion": "yarn test",
     "version": "yarn run build && git add -Af dist",
     "postversion": "git push && git push --tags",
-    "build": "parcel build index.html",
+    "build": "parcel build index.html --public-url /giving/",
     "dev": "parcel index.html --open",
     "start": "yarn run build && yarn run dev",
     "test": "echo \"Error: no test specified\" && exit 0"
