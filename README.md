@@ -62,3 +62,7 @@ To start with, we will explore:
 # Start development server
 yarn dev
 ```
+
+### Reference Material
+
+- [Fundamentals of Web Components](https://developers.google.com/web/fundamentals/web-components/customelements)
