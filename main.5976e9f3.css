@@ -1,0 +1,136 @@
+section {
+  padding: 1rem;
+}
+
+.button.outline {
+  background: none;
+  color: #fff;
+  border: 3px solid #fff;
+}
+
+.button.outline:hover {
+  background: #fff;
+  color: #ff851b;
+}
+
+.cta .cta-image, .cta-alt .cta-image {
+  width: 100%;
+}
+
+.cta .cta-text, .cta-alt .cta-text {
+  padding: 3rem 2rem;
+  color: #fff;
+  background-size: cover;
+  width: 100%;
+}
+
+/*
+.cta .cta-text {/
+  background-image: url('img/orange_square2.jpg');
+}
+
+.cta-alt .cta-text {
+  background-image: url('img/yellow_square2.jpg');
+}
+*/
+
+.cta .cta-text, .cta-alt .cta-text {
+  height: calc(100% - .4em);
+}
+
+.cta .cta-text, .cta-alt .cta-image {
+  margin-top: -1em;
+}
+
+.cta-block {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 2rem;
+  border: 3px solid #eee;
+  width: calc(100% - .4em);
+}
+
+@media all and (min-width: 1000px){
+  .cta .cta-text, .cta-alt .cta-image {
+    margin-left: -.6em;
+    margin-top: 0;
+  }
+}
+
+.avatar{
+  display: block;
+  border-radius: 5px;
+  width: 18rem;
+  height: 10rem;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+}
+
+.title {
+  padding: 2rem 0;
+}
+
+@media all and (min-width: 1000px){
+  .description {
+    min-height: 8rem;
+  }
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #eee;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.progress-bar .bar {
+  height: 100%;
+  position: absolute;
+  animation: progress-animate 1s ease-out;
+  background: linear-gradient(to right, #2bc253 0%,#219e42 100%);
+}
+
+@keyframes progress-animate {
+  0% {left: -100%;}
+  95% {left: 0;}
+}
+
+.raise-amount {
+  display: flex;
+  font-weight: 800;
+  line-height: 2rem;
+  margin: .5rem 0;
+}
+
+.raise-amount .raised {
+  font-size: 2rem;
+  margin-right: .5rem;
+}
+
+.content img {
+  margin: 0 auto;
+  max-width: 5rem;
+}
+
+.mission {
+  padding: 0 1rem;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.footer {
+  width: 100%;
+  padding: .5rem 0;
+  text-align: center;
+  background-color: #454545;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.footer a {
+  color: #fff;
+}
+
+/*# sourceMappingURL=main.5976e9f3.css.map */
