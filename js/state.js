@@ -24,13 +24,13 @@ const emailMachine = Machine({
   initial: "idle",
   states: {
     init: {},
-    sending: {},
-  },
+    sending: {}
+  }
 });
 
 // gundb magic
 const authMachine = Machine({
-  id: "auth",
+  id: "auth"
 });
 
 // You can copy paste this into https://xstate.js.org/viz/
@@ -42,15 +42,15 @@ const appMachine = Machine({
       invoke: {
         src: "loadCredentials",
         onDone: "authenticated",
-        onError: "anonymous",
-      },
+        onError: "anonymous"
+      }
     },
     anonymous: {
       initial: "welcome",
       states: {
         welcome: {},
-        register: {},
-      },
+        register: {}
+      }
     },
     authenticated: {
       initial: "profile",
@@ -60,49 +60,49 @@ const appMachine = Machine({
             APPLY: "apply",
             VIEW_APPLICATIONS: "applications",
             VIEW_BENFICARIES: "beneficiary",
-            VIEW_DONARS: "donor",
-          },
+            VIEW_DONARS: "donor"
+          }
         },
         apply: {
           on: {
-            SUBMIT_APPLICATION: "profile",
-          },
+            SUBMIT_APPLICATION: "profile"
+          }
         },
         applications: {
           initial: "list",
           on: {
-            VIEW_PROFILE: "profile",
+            VIEW_PROFILE: "profile"
           },
           states: {
             list: {
               on: {
-                SELECT_APPLICATION: "selected",
-              },
+                SELECT_APPLICATION: "selected"
+              }
             },
             selected: {
               invoke: {
                 src: "loadApplication",
-                onDone: {},
+                onDone: {}
               },
               states: {
                 pending: {},
                 approved: {},
                 complete: {},
-                rejected: {},
-              },
-            },
-          },
+                rejected: {}
+              }
+            }
+          }
         },
         beneficiary: {
           initial: "list",
           on: {
-            VIEW_PROFILE: "profile",
+            VIEW_PROFILE: "profile"
           },
           states: {
             list: {
               on: {
-                SELECT_BENFICARY: "selected",
-              },
+                SELECT_BENFICARY: "selected"
+              }
             },
             selected: {
               initial: "init",
@@ -111,30 +111,30 @@ const appMachine = Machine({
                   invoke: {
                     src: "isDonor",
                     onDone: "donor",
-                    onError: "public",
-                  },
+                    onError: "public"
+                  }
                 },
                 public: {},
-                donor: {},
-              },
-            },
-          },
+                donor: {}
+              }
+            }
+          }
         },
         donor: {
           initial: "list",
           on: {
-            VIEW_PROFILE: "profile",
+            VIEW_PROFILE: "profile"
           },
           states: {
             list: {
               on: {
-                SELECT_DONAR: "selected",
-              },
+                SELECT_DONAR: "selected"
+              }
             },
-            selected: {},
-          },
-        },
-      },
-    },
-  },
+            selected: {}
+          }
+        }
+      }
+    }
+  }
 });
